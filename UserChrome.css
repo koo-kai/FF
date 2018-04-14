@@ -1,0 +1,299 @@
+@-moz-document url(chrome://browser/content/browser.xul);
+
+/* 検索バーの → を常に表示 */
+.search-go-button {
+    display: inline-block !important;
+}
+/* メニューボタン非表示 */
+#PanelUI-menu-button {
+    display: none;
+}
+/* サイドバーのヘッダーをスリムにする */
+#sidebar-header {
+    padding: 2px !important;
+}
+#sidebar-icon {
+    height: 14px !important;
+}
+#sidebar-title {
+    font-size: 14px !important;
+    padding-inline-start: 4px !important;
+}
+toolbarbutton #PanelUI-remotetabs-view-managedevices {
+    display: none !important;
+}
+
+/* タブの幅 */
+.tabbrowser-tab {
+    flex-grow: 1;
+    max-width: 150px;
+}
+
+/*** ↓↓↓タブを下に表示↓↓↓ ***/
+/* Tab bar below Navigation & Bookmarks Toolbars */
+#nav-bar {
+    /* main toolbar */
+    -moz-box-ordinal-group: 1 !important;
+    box-shadow: none !important;
+}
+#PersonalToolbar {
+    /* bookmarks toolbar */
+    -moz-box-ordinal-group: 2 !important;
+}
+#TabsToolbar {
+    /* tab bar */
+    -moz-box-ordinal-group: 3 !important;
+    padding-top: 0 !important;
+}
+/* Clean up spacing */
+.titlebar-placeholder {
+    display: none !important;
+}
+toolbarbutton.bookmark-item {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+/* If you display either:
+   (1) The title bar, or
+   (2) On Windows, the menu bar
+   You might not want the following extra space above the main toolbar.
+   In that case, delete the following rule:
+#navigator-toolbox {
+  padding-top: 20px !important;
+}
+/* Background for Light and Dark themes */
+#main-window[lwthemetextcolor="bright"] #TabsToolbar,
+#main-window[lwthemetextcolor="dark"] #TabsToolbar {
+    background-color: var(--chrome-secondary-background-color) !important;
+    background-image: none !important;
+}
+#main-window[lwthemetextcolor="dark"] .scrollbutton-up,
+#main-window[lwthemetextcolor="dark"] .scrollbutton-down,
+#main-window[lwthemetextcolor="dark"] .tabs-newtab-button,
+#main-window[lwthemetextcolor="dark"] #new-tab-button,
+#main-window[lwthemetextcolor="dark"] #alltabs-button {
+    fill: var(--lwt-text-color) !important;
+}
+/* Left and right borders on Win 7 & 8, but not on 10 and later: */
+@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
+    /* Vertical toolbar border */
+    #main-window[sizemode=normal] #navigator-toolbox>toolbar#TabsToolbar {
+        border-left: 1px solid hsla(240, 5%, 5%, 0.3) !important;
+        border-right: 1px solid hsla(240, 5%, 5%, 0.3) !important;
+        background-clip: padding-box;
+    }
+}
+/*** ↑↑↑タブを下に表示↑↑↑ ***/
+
+/*** ↓↓↓多段タブ関連↓↓↓ ***/
+/* === 多段タブ === */
+/* タイトルバーボタン */
+#titlebar,#titlebar-buttonbox {
+    height: 32px !important;
+}
+#titlebar {
+    margin-bottom: -32px !important;
+}
+#main-window[sizemode="maximized"] #titlebar {
+    margin-bottom: -24px !important;
+}
+/* タブバー */
+#tabbrowser-tabs,
+.tabbrowser-arrowscrollbox {
+    min-height: 32px !important;
+}
+/* タブ */
+#tabbrowser-tabs .arrowscrollbox-scrollbox {
+    overflow: visible !important;
+    display: block !important;
+}
+#tabbrowser-tabs .scrollbox-innerbox {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow-y: auto !important;
+}
+.tabbrowser-tab:not([pinned]) {
+    flex-grow: 1 !important;
+    display: -webkit-box !important;
+    min-height: 32px !important;
+}
+.tab-stack {
+     width: 100% !important;
+    height: 100% !important;
+}
+/* -- 非表示 -- */
+#tabbrowser-tabs .scrollbutton-up,
+#tabbrowser-tabs .scrollbutton-down,
+#tabbrowser-tabs .autorepeatbutton-up,
+#tabbrowser-tabs .autorepeatbutton-down,
+#alltabs-button {
+    display: none !important;
+}
+/* タブを移動する時のレイアウトを固定 */
+/* remove 'dragging tab' margin/padding nonsense */
+#TabsToolbar[movingtab] {
+    padding-bottom: unset !important;
+}
+#TabsToolbar[movingtab]>.tabbrowser-tabs {
+    padding-bottom: unset !important;
+    margin-bottom: unset !important;
+}
+#TabsToolbar[movingtab]+#nav-bar {
+    margin-top: unset !important;
+}
+/*** ↑↑↑多段タブ関連↑↑↑ ***/
+
+/*** ↓↓↓タブバーの色関連↓↓↓ ***/
+/* タブバーの背景色 */
+/*.tabbrowser-tabs, #main-window[windowtype="navigator:browser"] {*/
+.tabbrowser-tabs {
+    background-color: #f9f9fa !important;
+    /*border-width:0px 1px;*/
+    margin: 0px 1px !important;
+}
+/* タブを閉じるボタンを常に表示 */
+.tab-close-button {
+    display: -moz-box !important;
+}
+/* 未読み込みのタブを半透明に */
+.tabbrowser-tab[pending] {
+    opacity: .6;
+}
+/* 新しいタブを開くボタンの色 */
+.tabs-newtab-button {
+    filter: invert(50%) !important;
+    margin: 3px 0px 0px -3px !important;
+}
+/*** ↑↑↑タブバーの色関連↑↑↑ ***/
+
+/*** ↓↓↓コンテキストメニュー↓↓↓ ***/
+/* リンクを新しいコンテナータブで開く */
+menu#context-openlinkinusercontext-menu,
+/* リンクを新しいプライベートウィンドウで開く */
+menuitem#context-openlinkprivate,
+/* ページを端末に送る */
+menuseparator#context-sep-sendpagetodevice,
+menu#context-sendpagetodevice,
+/* リンクを端末に送る */
+menuseparator#context-sep-sendlinktodevice,
+menu#context-sendlinktodevice,
+/* ツリー型タブ */
+#contentAreaContextMenu menu[id^="treestyletab"]
+{
+    display: none !important;
+}
+/*** ↑↑↑コンテキストメニュー↑↑↑ ***/
+
+/*** ↓↓↓タブコンテキストメニュー↓↓↓ ***/
+/* タブを複製 */
+menuitem#context_duplicateTab
+{
+    -moz-box-ordinal-group: 13;
+}
+/* タブを再読み込み */
+menuitem#context_reloadTab
+{
+    -moz-box-ordinal-group: 15;
+}
+/* すべてのタブを再読み込み */
+menuitem#context_reloadAllTabs
+{
+    -moz-box-ordinal-group: 18;
+}
+/* タブをミュート 直後の区切線 */
+menuitem#context_toggleMuteTab+menuseparator
+{
+    -moz-box-ordinal-group: 20;
+}
+/* Undo Close Tab Button */
+#tabContextMenu menu[id^="undo-close-tab-buttons"],
+/* 閉じたタブを元に戻す */
+menuitem#context_undoCloseTab
+{
+    -moz-box-ordinal-group: 25;
+}
+/* タブを閉じる 直後の区切線 */
+menuitem#context_closeTab+menuseparator
+{
+    -moz-box-ordinal-group: 30;
+}
+/* タブを閉じる */
+menuitem#context_closeTab
+{
+    -moz-box-ordinal-group: 33;
+}
+/* 他のタブをすべて閉じる */
+menuitem#context_closeOtherTabs
+{
+    -moz-box-ordinal-group: 35;
+}
+/* Close Tabs to the Left */
+#tabContextMenu menuitem[id^="_08fb86c7-5590-40b1-ba0f-22917b9a5faf_"]
+{
+    -moz-box-ordinal-group: 38;
+}
+/* 右側のタブをすべて閉じる */
+menuitem#context_closeTabsToTheEnd,
+/* 他のタブをすべて閉じる 直後の区切線 */
+menuitem#context_closeOtherTabs+menuseparator
+{
+    -moz-box-ordinal-group: 40;
+}
+/* すべてのタブをブックマーク… */
+menuitem#context_bookmarkAllTabs
+{
+    -moz-box-ordinal-group: 45;
+}
+/* ツリー型タブ */
+#tabContextMenu menu[id^="treestyletab"],
+/* タブをミュート */
+menuitem#context_toggleMuteTab,
+/* タブをピン留め */
+menuitem#context_pinTab,
+/* タブのピン留めを外す */
+menuitem#context_unpinTab,
+/* 新しいウィンドウへ移動 */
+menuitem#context_openTabInWindow,
+/* タブを端末へ送信 メニュー直前の区切線 */
+menuseparator#context_sendTabToDevice_separator,
+/* タブを端末へ送信 メニュー */
+menu#context_sendTabToDevice,
+/* タブを端末へ送信 メニュー直後の区切線 */
+menu#context_sendTabToDevice+menuseparator
+{
+    display: none !important;
+}
+/*** ↑↑↑タブコンテキストメニュー↑↑↑ ***/
+
+/* ????? */
+#PopupAutoCompleteRichResult>rc>:-moz-any(richlistitem[actiontype="searchengine"]) {
+    display: none !important;
+}
+#PopupAutoCompleteRichResult {
+    max-width: 900px !important;
+}
+
+/* ????? */
+#urlbar .urlbar-history-dropmarker {
+    display: none !important;
+}
+
+/*
+menuitem#context_reloadTab /* タブを再読み込み
+menuitem#context_toggleMuteTab /* タブをミュート
+menuitem#context_toggleMuteTab + menuseparator /* タブをミュート 直後の区切線
+menuitem#context_pinTab /* タブをピン留め
+menuitem#context_unpinTab /* タブのピン留めを外す
+menuitem#context_duplicateTab /* タブを複製
+menuitem#context_openTabInWindow /* 新しいウィンドウへ移動
+menuseparator#context_sendTabToDevice_separator /* タブを端末へ送信 メニュー直前の区切線
+menu#context_sendTabToDevice /* タブを端末へ送信 メニュー
+menu#context_sendTabToDevice + menuseparator /* タブを端末へ送信 メニュー直後の区切線
+menuitem#context_reloadAllTabs /* すべてのタブを再読み込み
+menuitem#context_bookmarkAllTabs /* すべてのタブをブックマーク…
+menuitem#context_closeTabsToTheEnd /* 右側のタブをすべて閉じる
+menuitem#context_closeOtherTabs /* 他のタブをすべて閉じる
+menuitem#context_closeOtherTabs + menuseparator /* 他のタブをすべて閉じる 直後の区切線
+menuitem#context_undoCloseTab /* 閉じたタブを元に戻す
+menuitem#context_closeTab /* タブを閉じる */
+
