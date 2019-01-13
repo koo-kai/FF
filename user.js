@@ -14,6 +14,11 @@ user_pref("browser.download.autohideButton", false);
 user_pref("browser.bookmarks.showMobileBookmarks", false);
 user_pref("browser.bookmarks.showRecentlyBookmarked", false);
 
+//ホーム画面にトップサイト、ハイライト、スニペットを表示しない
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+
 //リンクを新しいタブで開いたとき切り替える
 user_pref("browser.tabs.loadInBackground", false);
 
@@ -38,11 +43,14 @@ user_pref("accessibility.browsewithcaret", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
 //キャッシュ関連
-user_pref("browser.cache.disk.parent_directory", "R:\TEMP\Firefox");
+//user_pref("browser.cache.disk.parent_directory", "R:\TEMP\Firefox");
 user_pref("browser.cache.memory.enable", true);
 user_pref("browser.cache.memory.capacity", 233016);
 user_pref("browser.cache.memory.max_entry_size", 10240);
-user_pref("browser.cache.offline.parent_directory", "R:\TEMP\Firefox");
+//user_pref("browser.cache.offline.parent_directory", "R:\TEMP\Firefox");
+
+//アクセシビリティサービス拒否
+user_pref("accessibility.force_disabled", 1);
 
 //情報収集機能（ヘルスレポート）を無効化
 user_pref("datareporting.healthreport.uploadEnabled", false);
@@ -55,5 +63,5 @@ user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.unifiedIsOptIn", false);
-//user_pref("browser.sessionstore.resume_session_once", true);
 
+user_pref("browser.sessionstore.resume_session_once", false);
