@@ -43,25 +43,21 @@ user_pref("accessibility.browsewithcaret", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
 //キャッシュ関連
-//user_pref("browser.cache.disk.parent_directory", "R:\TEMP\Firefox");
 user_pref("browser.cache.memory.enable", true);
 user_pref("browser.cache.memory.capacity", 233016);
 user_pref("browser.cache.memory.max_entry_size", 10240);
-//user_pref("browser.cache.offline.parent_directory", "R:\TEMP\Firefox");
-
-//アクセシビリティサービス拒否
-user_pref("accessibility.force_disabled", 1);
 
 //情報収集機能（ヘルスレポート）を無効化
 user_pref("datareporting.healthreport.uploadEnabled", false);
-user_pref("datareporting.healthreport.logging.consoleEnabled", false);
 user_pref("datareporting.healthreport.service.enabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 
 //情報収集機能（テレメトリ）を無効化
 user_pref("toolkit.telemetry.enabled", false);
-user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.unifiedIsOptIn", false);
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("experiments.supported", false);
+user_pref("experiments.enabled", false);
+user_pref("experiments.manifest.uri", "");
 
 user_pref("browser.sessionstore.resume_session_once", false);
