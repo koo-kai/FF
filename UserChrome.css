@@ -1,4 +1,9 @@
 @-moz-document url(chrome://browser/content/browser.xul);
+@import "./css/tabs/tabs_below_navigation_toolbar_fx65_v2.css";
+@import "./css/tabs/tabs_multiple_lines_v2.css";
+@import "./css/toolbars/addonbar_content_on_the_right.css";
+@import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css";
+@import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom.css";
 
 /* 検索バーの → を常に表示 */
 .search-go-button {
@@ -28,120 +33,6 @@ toolbarbutton #PanelUI-remotetabs-view-managedevices {
     flex-grow: 1;
     max-width: 150px;
 }
-
-/*** ↓↓↓タブを下に表示↓↓↓ ***/
-/* Tab bar below Navigation & Bookmarks Toolbars */
-#nav-bar {
-    /* main toolbar */
-    -moz-box-ordinal-group: 1 !important;
-    box-shadow: none !important;
-}
-#PersonalToolbar {
-    /* bookmarks toolbar */
-    -moz-box-ordinal-group: 2 !important;
-}
-#TabsToolbar {
-    /* tab bar */
-    -moz-box-ordinal-group: 3 !important;
-    padding-top: 0 !important;
-}
-/* Clean up spacing */
-.titlebar-placeholder {
-    display: none !important;
-}
-toolbarbutton.bookmark-item {
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-}
-/* If you display either:
-   (1) The title bar, or
-   (2) On Windows, the menu bar
-   You might not want the following extra space above the main toolbar.
-   In that case, delete the following rule:
-#navigator-toolbox {
-  padding-top: 20px !important;
-}
-/* Background for Light and Dark themes */
-#main-window[lwthemetextcolor="bright"] #TabsToolbar,
-#main-window[lwthemetextcolor="dark"] #TabsToolbar {
-    background-color: var(--chrome-secondary-background-color) !important;
-    background-image: none !important;
-}
-#main-window[lwthemetextcolor="dark"] .scrollbutton-up,
-#main-window[lwthemetextcolor="dark"] .scrollbutton-down,
-#main-window[lwthemetextcolor="dark"] .tabs-newtab-button,
-#main-window[lwthemetextcolor="dark"] #new-tab-button,
-#main-window[lwthemetextcolor="dark"] #alltabs-button {
-    fill: var(--lwt-text-color) !important;
-}
-/* Left and right borders on Win 7 & 8, but not on 10 and later: */
-@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
-    /* Vertical toolbar border */
-    #main-window[sizemode=normal] #navigator-toolbox>toolbar#TabsToolbar {
-        border-left: 1px solid hsla(240, 5%, 5%, 0.3) !important;
-        border-right: 1px solid hsla(240, 5%, 5%, 0.3) !important;
-        background-clip: padding-box;
-    }
-}
-/*** ↑↑↑タブを下に表示↑↑↑ ***/
-
-/*** ↓↓↓多段タブ関連↓↓↓ ***/
-/* === 多段タブ === */
-/* タイトルバーボタン */
-#titlebar,#titlebar-buttonbox {
-    height: 32px !important;
-}
-#titlebar {
-    margin-bottom: -32px !important;
-}
-#main-window[sizemode="maximized"] #titlebar {
-    margin-bottom: -24px !important;
-}
-/* タブバー */
-#tabbrowser-tabs,
-.tabbrowser-arrowscrollbox {
-    min-height: 32px !important;
-}
-/* タブ */
-#tabbrowser-tabs .arrowscrollbox-scrollbox {
-    overflow: visible !important;
-    display: block !important;
-}
-#tabbrowser-tabs .scrollbox-innerbox {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    overflow-y: auto !important;
-}
-.tabbrowser-tab:not([pinned]) {
-    flex-grow: 1 !important;
-    display: -webkit-box !important;
-    min-height: 32px !important;
-}
-.tab-stack {
-     width: 100% !important;
-    height: 100% !important;
-}
-/* -- 非表示 -- */
-#tabbrowser-tabs .scrollbutton-up,
-#tabbrowser-tabs .scrollbutton-down,
-#tabbrowser-tabs .autorepeatbutton-up,
-#tabbrowser-tabs .autorepeatbutton-down,
-#alltabs-button {
-    display: none !important;
-}
-/* タブを移動する時のレイアウトを固定 */
-/* remove 'dragging tab' margin/padding nonsense */
-#TabsToolbar[movingtab] {
-    padding-bottom: unset !important;
-}
-#TabsToolbar[movingtab]>.tabbrowser-tabs {
-    padding-bottom: unset !important;
-    margin-bottom: unset !important;
-}
-#TabsToolbar[movingtab]+#nav-bar {
-    margin-top: unset !important;
-}
-/*** ↑↑↑多段タブ関連↑↑↑ ***/
 
 /*** ↓↓↓タブバーの色関連↓↓↓ ***/
 /* タブバーの背景色 */
