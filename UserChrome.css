@@ -1,4 +1,7 @@
 @-moz-document url(chrome://browser/content/browser.xul);
+@import "./css/tabs/default_tabs_tab_background_appearance.css";
+@import "./css/tabs/newtab_button_always_visible.css";
+@import "./css/tabs/tab_close_always_visible.css";
 @import "./css/tabs/tabs_below_navigation_toolbar_fx65_v2.css";
 @import "./css/tabs/tabs_multiple_lines_v2.css";
 @import "./css/toolbars/addonbar_content_on_the_right.css";
@@ -35,26 +38,25 @@ toolbarbutton #PanelUI-remotetabs-view-managedevices {
 }
 
 /*** ↓↓↓タブバーの色関連↓↓↓ ***/
-/* タブバーの背景色 */
-/*.tabbrowser-tabs, #main-window[windowtype="navigator:browser"] {*/
-.tabbrowser-tabs {
-    background-color: #f9f9fa !important;
-    /*border-width:0px 1px;*/
-    margin: 0px 1px !important;
-}
-/* タブを閉じるボタンを常に表示 */
-.tab-close-button {
-    display: -moz-box !important;
-}
 /* 未読み込みのタブを半透明に */
 .tabbrowser-tab[pending] {
     opacity: .6;
 }
-/* 新しいタブを開くボタンの色 */
-.tabs-newtab-button {
-    filter: invert(50%) !important;
-    margin: 3px 0px 0px -3px !important;
+/* default_tabs_tab_border から抜粋 */
+.tabbrowser-tab {
+    border-top: 1px solid var(--tabs-border-color) !important;
+    border-left: 1px solid var(--tabs-border-color) !important;
+    border-right: 1px solid var(--tabs-border-color) !important;
 }
+#TabsToolbar:-moz-lwtheme-brighttext .tabbrowser-tab {
+    border-top: 1px solid #5a5a5c !important;
+    border-left: 1px solid #5a5a5c !important;
+    border-right: 1px solid #5a5a5c !important;
+}
+.tabbrowser-tab .tab-background {
+  border: unset !important;
+}
+/* default_tabs_tab_border から抜粋 */
 /*** ↑↑↑タブバーの色関連↑↑↑ ***/
 
 /*** ↓↓↓コンテキストメニュー↓↓↓ ***/
