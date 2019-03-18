@@ -43,9 +43,11 @@ user_pref("accessibility.browsewithcaret", true);
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
 //キャッシュ関連
+//user_pref("browser.cache.disk.parent_directory", "R:\TEMP\Firefox");
 user_pref("browser.cache.memory.enable", true);
 user_pref("browser.cache.memory.capacity", 233016);
 user_pref("browser.cache.memory.max_entry_size", 10240);
+//user_pref("browser.cache.offline.parent_directory", "R:\TEMP\Firefox");
 
 //情報収集機能（ヘルスレポート）を無効化
 user_pref("datareporting.healthreport.uploadEnabled", false);
