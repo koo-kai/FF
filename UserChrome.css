@@ -73,11 +73,11 @@ menuseparator#context-sep-sendlinktodevice,
 /*** ↑↑↑コンテキストメニュー↑↑↑ ***/
 
 /*** ↓↓↓タブコンテキストメニュー↓↓↓ ***/
-#context_duplicateTab                       /* タブを複製                     */
+#context_duplicateTab                            /* タブを複製 */
 {
     -moz-box-ordinal-group: 13;
 }
-#context_reloadTab,                         /* タブを再読み込み               */
+#context_reloadTab,                              /* タブを再読み込み */
 #context_reloadSelectedTabs
 {
     -moz-box-ordinal-group: 15;
@@ -93,24 +93,24 @@ menuseparator#context-sep-sendlinktodevice,
 {
     -moz-box-ordinal-group: 19;
 }
-#context_duplicateTab + menuseparator            /* [区切り]                  */
+#context_duplicateTabs + menuseparator            /* [区切り] */
 {
     -moz-box-ordinal-group: 20;
 }
-#context_undoCloseTab,                      /* 閉じたタブを元に戻す           */
+#context_undoCloseTab,                           /* 閉じたタブを元に戻す */
 #tabContextMenu menu[id^="undo-close-tab-buttons"]
 {
     -moz-box-ordinal-group: 25;
 }
-#context_sendTabToDevice + menuseparator         /* [区切り]                  */
+#context_sendTabToDevice + menuseparator         /* [区切り] */
 {
     -moz-box-ordinal-group: 30;
 }
-#context_closeTab                           /* タブを閉じる                   */
+#context_closeTab                                /* タブを閉じる */
 {
     -moz-box-ordinal-group: 33;
 }
-#context_closeOtherTabs                     /* 他のタブをすべて閉じる         */
+#context_closeOtherTabs                          /* 他のタブをすべて閉じる */
 {
     -moz-box-ordinal-group: 35;
 }
@@ -118,19 +118,19 @@ menuseparator#context-sep-sendlinktodevice,
 {
     -moz-box-ordinal-group: 38;
 }
-#context_closeTabsToTheEnd,                 /* 右側のタブをすべて閉じる       */
+#context_closeTabsToTheEnd,                      /* 右側のタブをすべて閉じる */
 #context_closeSelectedTabs
 {
     -moz-box-ordinal-group: 40;
 }
 #tabContextMenu menu[id^="treestyletab"],
-#context_toggleMuteTab,                     /* タブをミュート                 */
+#context_toggleMuteTab,                          /* タブをミュート */
 #context_toggleMuteSelectedTabs,
-#context_pinTab,                            /* タブをピン留め                 */
-#context_unpinTab,                          /* タブのピン留めを外す           */
+#context_pinTab,                                 /* タブをピン留め */
+#context_unpinTab,                               /* タブのピン留めを外す */
 #context_pinSelectedTabs,
 #context_unpinSelectedTabs,
-#context_sendTabToDevice                    /* タブを端末へ送信 メニュー      */
+#context_sendTabToDevice                        /* タブを端末へ送信 メニュー */
 {
     display: none !important;
 }
