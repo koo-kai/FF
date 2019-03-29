@@ -1,9 +1,9 @@
 @-moz-document url(chrome://browser/content/browser.xul);
 @import "./css/tabs/default_tabs_tab_background_appearance.css";
-@import "./css/tabs/newtab_button_always_visible.css";
-@import "./css/tabs/tab_close_always_visible.css";
+/* @import "./css/tabs/newtab_button_always_visible.css"; */
+/* @import "./css/tabs/tab_close_always_visible.css"; */
 @import "./css/tabs/tabs_below_navigation_toolbar_fx65_v2.css";
-@import "./css/tabs/tabs_multiple_lines_v2.css";
+@import "./css/tabs/tabs_multiple_lines_v3.css";
 @import "./css/toolbars/addonbar_content_on_the_right.css";
 @import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css";
 @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom.css";
