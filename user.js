@@ -49,6 +49,9 @@ user_pref("browser.cache.memory.capacity", 233016);
 user_pref("browser.cache.memory.max_entry_size", 10240);
 //user_pref("browser.cache.offline.parent_directory", "R:\TEMP\Firefox");
 
+//userChrome.css, userContent.cssのロード有効化
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
 //情報収集機能（ヘルスレポート）を無効化
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.healthreport.service.enabled", false);
@@ -62,4 +65,5 @@ user_pref("experiments.supported", false);
 user_pref("experiments.enabled", false);
 user_pref("experiments.manifest.uri", "");
 
+//以前のセッションを復元しない
 user_pref("browser.sessionstore.resume_session_once", false);
