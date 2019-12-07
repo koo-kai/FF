@@ -1,0 +1,20 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+    uriHandlerRegistration: "always"
+  editor:
+    fontFamily: "Myrica M"
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "76a4ddf4-e67b-49c7-b5f2-0b5f7940d0a1"
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  "markdown-writer": {}
+  welcome:
+    showOnStartup: false
