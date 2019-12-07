@@ -1,14 +1,19 @@
 {
-  "timestamp": "2018-03-09T16:34:27.613Z",
-  "fileName": "foxyGestures.2018-03-10.json",
+  "timestamp": "2019-12-07T15:42:14.308Z",
+  "fileName": "foxyGestures.2019-12-08.json",
   "addonId": "{e839c3f9-298e-4cd0-99e0-464431cb7c34}",
-  "version": "1.1.0",
+  "version": "1.2.4",
   "settings": {
     "gestureTimeout": 2000,
     "statusTimeout": 2000,
     "showStatusText": true,
+    "blacklistUrlPatterns": [],
+    "whitelistMode": false,
+    "gestureDetector": {
+      "style": "cardinal"
+    },
     "gestureButton": 2,
-    "gestureFidelity": 10,
+    "gestureFidelity": 3,
     "drawTrails": false,
     "trailFidelity": 10,
     "trailWidth": 2,
@@ -43,28 +48,28 @@
         "command": "pageUp"
       },
       {
-        "gesture": "DLR",
-        "command": "scrollBottom"
-      },
-      {
-        "gesture": "ULR",
-        "command": "scrollTop"
-      },
-      {
-        "gesture": "RLR",
-        "command": "undoClose"
+        "command": "reloadBypassCache",
+        "gesture": "UDU"
       },
       {
         "command": "reload",
         "gesture": "UD"
       },
       {
-        "command": "reloadBypassCache",
-        "gesture": "UDU"
+        "command": "scrollTop",
+        "gesture": "U"
+      },
+      {
+        "command": "scrollBottom",
+        "gesture": "D"
       },
       {
         "command": "newTab",
         "gesture": "LR"
+      },
+      {
+        "command": "undoClose",
+        "gesture": "RLR"
       }
     ],
     "disableOnAlt": true,
