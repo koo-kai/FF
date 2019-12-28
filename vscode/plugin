@@ -1,13 +1,14 @@
-christian-kohler.path-intellisense
-CoenraadS.bracket-pair-colorizer
-HookyQR.beautify
-janisdd.vscode-edit-csv
-mechatroner.rainbow-csv
-MS-CEINTL.vscode-language-pack-ja
-ms-python.python
-naumovs.color-highlight
-ryu1kn.partial-diff
-saikou9901.evilinspector
-shd101wyy.markdown-preview-enhanced
-yzhang.markdown-all-in-one
-zhuangtongfa.material-theme
+code --install-extension christian-kohler.path-intellisense
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension HookyQR.beautify
+code --install-extension janisdd.vscode-edit-csv
+code --install-extension mechatroner.rainbow-csv
+code --install-extension MS-CEINTL.vscode-language-pack-ja
+code --install-extension ms-python.python
+code --install-extension naumovs.color-highlight
+code --install-extension ryu1kn.partial-diff
+code --install-extension saikou9901.evilinspector
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension yzane.markdown-pdf
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension zhuangtongfa.material-theme
