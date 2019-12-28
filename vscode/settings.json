@@ -5,5 +5,9 @@
     "files.autoGuessEncoding": true,
     "files.eol": "\n",
     "workbench.colorTheme": "One Dark Pro",
-    "color-highlight.matchWords": true
+    "color-highlight.matchWords": true,
+    "markdown-pdf.executablePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "markdown-pdf.type": "html",
+    "markdown.extension.orderedList.autoRenumber": false,
+    "markdown.extension.orderedList.marker": "one"
 }
