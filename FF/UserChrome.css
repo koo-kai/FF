@@ -4,9 +4,8 @@
 /* @import "./css/tabs/tab_close_always_visible.css"; */
 @import "./css/tabs/tabs_below_navigation_toolbar_fx65_v2.css";
 @import "./css/tabs/tabs_multiple_lines_fx71.css";
-@import "./css/toolbars/addonbar_content_on_the_right.css";
-@import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css";
-@import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom.css";
+/* @import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css"; */
+/* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom_fx72.css"; */
 
 /* 検索バーの → を常に表示 */
 .search-go-button {
