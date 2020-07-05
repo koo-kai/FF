@@ -10,11 +10,13 @@ user_pref("browser.search.openintab",true);
 //ダウンロードボタンを常に表示
 user_pref("browser.download.autohideButton", false);
 
-//アドレスバーをハイライトしない（FF75）
+//アドレスバーをハイライトしない（FF77）
 user_pref("browser.urlbar.openViewOnFocus", false);
-user_pref("browser.urlbar.update1", false);
 user_pref("browser.urlbar.update1.interventions", false);
-user_pref("browser.urlbar.update1. searchTips", false);
+user_pref("browser.urlbar.update1.searchTips", false);
+user_pref("browser.urlbar.disableExtendForTests", true);
+
+
 
 //モバイルのブックマーク、最近追加したブックマークを追加しない
 user_pref("browser.bookmarks.showMobileBookmarks", false);
