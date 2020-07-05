@@ -2,7 +2,7 @@
 @import "./css/tabs/default_tabs_tab_background_appearance.css";
 /* @import "./css/tabs/newtab_button_always_visible.css"; */
 /* @import "./css/tabs/tab_close_always_visible.css"; */
-@import "./css/tabs/tabs_below_navigation_toolbar_fx65_v2.css";
+@import "./css/tabs/tabs_below_navigation_toolbar_fx74.css";
 @import "./css/tabs/tabs_multiple_lines_fx71.css";
 /* @import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css"; */
 /* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom_fx72.css"; */
@@ -87,7 +87,6 @@ menuseparator#context-sep-sendlinktodevice,
     -moz-box-ordinal-group: 17;
 }
 #context_selectAllTabs,
-#context_reopenInContainer,
 #context_moveTabOptions
 {
     -moz-box-ordinal-group: 19;
@@ -118,7 +117,8 @@ menuseparator#context-sep-sendlinktodevice,
     -moz-box-ordinal-group: 38;
 }
 #context_closeTabsToTheEnd,                      /* 右側のタブをすべて閉じる */
-#context_closeSelectedTabs
+#context_closeSelectedTabs,
+#context_closeTabOptions
 {
     -moz-box-ordinal-group: 40;
 }
@@ -129,7 +129,8 @@ menuseparator#context-sep-sendlinktodevice,
 #context_unpinTab,                               /* タブのピン留めを外す */
 #context_pinSelectedTabs,
 #context_unpinSelectedTabs,
-#context_sendTabToDevice                        /* タブを端末へ送信 メニュー */
+#context_sendTabToDevice,                        /* タブを端末へ送信 メニュー */
+#context_reopenInContainer
 {
     display: none !important;
 }
